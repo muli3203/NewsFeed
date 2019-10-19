@@ -1,0 +1,1 @@
+NEWS_API_BASE_URL = 'https://newsapi.org/v2/sources?apiKey=f9b3923ad99d4449b0e79a0241931c05'
