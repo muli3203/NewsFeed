@@ -1,4 +1,4 @@
-import urllib.request,json
+from flask import urllib,request
 from .models import Source,Article
 
 
@@ -18,15 +18,15 @@ def configure_request(app):
     base_url = app.config['NEWS_API_BASE_URL']
     base_url2 =app.config['NEWS_API_BASE_URL2']
 
-def get_source(newss):
+def get_source(news):
     '''
     Function that gets the json response to our url request
     '''
-    get_sources_url = base_url.format(newss,api_key)
+    get_sources_url = base_url.format(news,api_key)
 
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
-        get_sources_response = json.loads(get_sources_data)
+        get_sources_response = loads(get_sources_data)
 
         source_results = None
 
