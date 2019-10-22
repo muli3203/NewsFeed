@@ -2,14 +2,7 @@
 {% import 'macro.html' as macro%}
 
 {% block content %}
-<div >
-                <h2 class="text text-center font-weight-bold headers">General News</h2>
-                {{ macro.display_new_sources(general)}}
-
-                <h2 class="text text-center font-weight-bold headers">Sport News</h2>
-                {{ macro.display_new_sources(sports)}}
-
-                <h2 class="text text-center font-weight-bold headers">Business News</h2>
-                {{ macro.display_new_sources(business)}}
+<div class ="container" >
+    <h1 class="text-center" font-weight="400">World News</h1>
 </div>
 {% endblock %}
